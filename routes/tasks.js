@@ -2,8 +2,8 @@ const express = require('express');
 const Task = require('../models/Task');
 const router = express.Router();
 
-// Middleware create task
-router.post('/create', async (req, res) => {
+// Middleware create task (POSTMAN: http://localhost:8080/create   ----  {"title": "Compras"})
+router.post('/create', async (req, res) => { 
   try {
     const newTask = new Task(req.body);
     await newTask.save();
