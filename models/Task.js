@@ -1,4 +1,18 @@
 const mongoose = require('mongoose');
+
+const TaskSchema = new mongoose.Schema({
+  title: String,
+  completed: Boolean,
+  }, { timestamps: true });
+
+
+const Task = mongoose.model('Task', TaskSchema);
+
+module.exports = Task;
+
+
+/*
+const mongoose = require('mongoose');
 const TaskSchema = new mongoose.Schema({
   title: {
     type: String,
@@ -11,3 +25,4 @@ const TaskSchema = new mongoose.Schema({
 }, { timestamps: true });
 const Task = mongoose.model('Task', TaskSchema);
 module.exports = Task;
+*/

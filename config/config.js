@@ -4,7 +4,8 @@ require('dotenv').config();
 
 const dbConnection = async () => {
   try {
-    console.log(process.env.MONGO_URI);
+    //console.log("Esta es mi URI:", process.env.MONGO_URI);
+    console.log("Ya se ha conectado la BBDD");
     await mongoose.connect(process.env.MONGO_URI);
     console.log('Base de datos conectada');
   } catch (error) {
